@@ -30,7 +30,7 @@
         {
             label1 = new Label();
             answerLabel = new Label();
-            textBox1 = new TextBox();
+            InputTextBox = new TextBox();
             searchButton = new Button();
             exitButton = new Button();
             SuspendLayout();
@@ -38,7 +38,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(86, 53);
+            label1.Location = new Point(86, 42);
             label1.Name = "label1";
             label1.Size = new Size(49, 20);
             label1.TabIndex = 0;
@@ -47,17 +47,17 @@
             // answerLabel
             // 
             answerLabel.BorderStyle = BorderStyle.FixedSingle;
-            answerLabel.Location = new Point(86, 98);
+            answerLabel.Location = new Point(86, 85);
             answerLabel.Name = "answerLabel";
-            answerLabel.Size = new Size(204, 25);
+            answerLabel.Size = new Size(204, 51);
             answerLabel.TabIndex = 1;
             // 
-            // textBox1
+            // InputTextBox
             // 
-            textBox1.Location = new Point(165, 53);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 2;
+            InputTextBox.Location = new Point(165, 42);
+            InputTextBox.Name = "InputTextBox";
+            InputTextBox.Size = new Size(125, 27);
+            InputTextBox.TabIndex = 2;
             // 
             // searchButton
             // 
@@ -67,6 +67,7 @@
             searchButton.TabIndex = 3;
             searchButton.Text = "Search";
             searchButton.UseVisualStyleBackColor = true;
+            searchButton.Click += searchButton_Click;
             // 
             // exitButton
             // 
@@ -85,7 +86,7 @@
             ClientSize = new Size(391, 213);
             Controls.Add(exitButton);
             Controls.Add(searchButton);
-            Controls.Add(textBox1);
+            Controls.Add(InputTextBox);
             Controls.Add(answerLabel);
             Controls.Add(label1);
             Name = "Form1";
@@ -99,7 +100,7 @@
 
         private Label label1;
         private Label answerLabel;
-        private TextBox textBox1;
+        private TextBox InputTextBox;
         private Button searchButton;
         private Button exitButton;
     }

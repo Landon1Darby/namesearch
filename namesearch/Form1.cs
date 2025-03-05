@@ -24,14 +24,21 @@ namespace namesearch
                 Names.Add(line);
             }
             streamReader.Close();
-            Allnames();
+
         }
-        private void Allnames()
+
+        private void searchButton_Click(object sender, EventArgs e)
         {
-           
+                if (Names.Contains(InputTextBox.Text))
+                {
+                    answerLabel.Text = "this name is amoung the popular ones";
+                }
+                else 
+                {
+                    answerLabel.Text = "this name is NOT amoung the popular ones";
+                }
+
         }
-        
-        
     }
 
 }
